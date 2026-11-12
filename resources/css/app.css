@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        color-scheme: light;
+    }
+
+    .dark {
+        color-scheme: dark;
+    }
+
+    /* Form controls (including Breeze's TextInput) follow the theme. */
+    .dark input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='file']),
+    .dark select,
+    .dark textarea {
+        @apply border-slate-700 bg-slate-800 text-slate-100 placeholder:text-slate-500;
+    }
+
+    .dark input[type='checkbox'],
+    .dark input[type='radio'] {
+        @apply border-slate-600 bg-slate-800;
+    }
+}
